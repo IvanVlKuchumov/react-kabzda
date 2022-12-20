@@ -2,12 +2,15 @@ import React from "react";
 import {AccordionTitle} from "./AccordionTitle";
 import {AccordionBody} from "./AccordionBody";
 
-export const Accordion = () => {
+export type AccordionPropsType = {
+    title:string
+}
+
+export const Accordion = (props:AccordionPropsType) => {
     return (
         <div>
-            <AccordionTitle/>
+            <AccordionTitle title={props.title}/>
             <AccordionBody/>
         </div>
-
     )
 }

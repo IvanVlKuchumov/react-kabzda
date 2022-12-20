@@ -4,11 +4,11 @@ import {Star} from "./Star";
 export const Rating = () => {
     return (
         <>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
+            <Star light={true}/>
+            <Star light={false}/>
+            <Star light={true}/>
+            <Star light={false}/>
+            <Star light={true}/>
         </>
     )
 }

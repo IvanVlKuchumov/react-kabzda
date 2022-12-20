@@ -8,7 +8,8 @@ function App() {
         <div className='content'>
             This is APP component
             <Rating/>
-            <Accordion/>
+            <Accordion title='menu'/>
+            <Accordion title='title'/>
         </div>
     );
 }
