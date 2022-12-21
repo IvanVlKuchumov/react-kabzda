@@ -1,8 +1,10 @@
 import React from "react";
-import {AccordionPropsType} from "./Accordion";
+type AccordionTitlePropsType = {
+    title:string,
+}
 
 
-export const AccordionTitle = (props:AccordionPropsType) => {
+export const AccordionTitle = (props:AccordionTitlePropsType) => {
     return (
         <h3>{props.title}</h3>
     )
