@@ -7,8 +7,12 @@ function App() {
     return (
         <div className='content'>
             This is APP component
-            <Rating/>
-            <Accordion title='menu' collapsed={true}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
+            <Accordion title='menu' collapsed={false}/>
             <Accordion title='title' collapsed={false}/>
         </div>
     );
