@@ -9,7 +9,7 @@ type AccordionPropsTitleType = {
     title: string,
 }
 
-export const Accordion = (props: AccordionPropsType) => {
+export const AccordionSelfControlled = (props: AccordionPropsType) => {
         return (
             <div>
                 <AccordionTitle title={props.title}/>

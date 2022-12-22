@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import {Rating} from "./components/Rating/Rating";
-import {Accordion} from "./components/Accordion/Accordion";
+import {AccordionUnControlled} from "./components/Accordion/AccordionUnControlled";
 import {OnOff} from "./components/OnOff/OnOff";
+import {AccordionSelfControlled} from "./components/Accordion/AccordionSelfControlled";
 
 function App() {
     return (
@@ -13,8 +14,9 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
-            <Accordion title='menu' collapsed={false}/>
-            <Accordion title='title' collapsed={false}/>
+            <AccordionSelfControlled title='menu' collapsed={true}/>
+            <AccordionSelfControlled title='title' collapsed={false}/>
+            <AccordionUnControlled title={'Acc1'}/>
             <OnOff />
             <OnOff />
         </div>
