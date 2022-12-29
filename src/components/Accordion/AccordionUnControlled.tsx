@@ -9,15 +9,20 @@ export const AccordionUnControlled = (props: AccordionPropsType) => {
     let [toggle, setToggle] = useState(true)
         return (
             <div>
-                <AccordionTitle title={props.title}/><button onClick={()=>{setToggle(!toggle)}}>Toggle</button>
+                <AccordionTitle title={props.title} onClick={()=>{setToggle(!toggle)}}/>
                 {!toggle && <AccordionBody/>}
             </div>
         )
 }
 
-const AccordionTitle = (props:AccordionPropsType) => {
+type AccordionTitleType = {
+    title: string
+    onClick: ()=>void
+}
+
+const AccordionTitle = (props:AccordionTitleType) => {
     return (
-        <h3>{props.title}</h3>
+        <h3 onClick={()=>props.onClick()}>{props.title}</h3>
     )
 }
 

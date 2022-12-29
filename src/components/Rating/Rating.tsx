@@ -4,7 +4,7 @@ type RatingPropsType = {
     value: 1 | 2 | 3 | 4 | 5
 }
 
-export const RatingUn = (props:RatingPropsType) => {
+export const Rating = (props:RatingPropsType) => {
 
     return (
         <div>
@@ -22,13 +22,5 @@ type StarPropsType = {
 }
 
 const Star = (props:StarPropsType) => {
-    if (props.selected) {
-        return (
-            <b>Star</b>
-        )
-    } else {
-        return (
-            <>Star</>
-        )
-    }
+    return <span>{props.selected? <b>Star</b> : <>Star</>}</span>
 }

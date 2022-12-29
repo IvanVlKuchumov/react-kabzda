@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {RatingUn} from "./components/Rating/RatingUn";
+import {Rating} from "./components/Rating/Rating";
 import {AccordionUnControlled} from "./components/Accordion/AccordionUnControlled";
 import {OnOff} from "./components/OnOff/OnOff";
 import {AccordionSelfControlled} from "./components/Accordion/AccordionSelfControlled";
@@ -10,7 +10,7 @@ function App() {
     return (
         <div className='content'>
             This is APP component
-            <RatingUn value={1}/>
+            <Rating value={4}/>
             <RatingButton/>
             <AccordionSelfControlled title='menu' collapsed={true}/>
             <AccordionSelfControlled title='title' collapsed={false}/>
