@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import {Rating} from "./components/Rating/Rating";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {AccordionUnControlled} from "./components/Accordion/AccordionUnControlled";
 import {OnOff} from "./components/OnOff/OnOff";
 import {AccordionSelfControlled} from "./components/Accordion/AccordionSelfControlled";
 import {RatingButton} from "./components/Rating/RatingButton";
 
 function App() {
+
+    const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+
     return (
         <div className='content'>
             This is APP component
-            <Rating value={4}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             <RatingButton/>
             <AccordionSelfControlled title='menu' collapsed={true}/>
             <AccordionSelfControlled title='title' collapsed={false}/>
