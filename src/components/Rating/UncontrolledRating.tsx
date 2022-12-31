@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-export const RatingButton = () => {
+export const UncontrolledRating = () => {
 
     let [value, setValue] = useState(0)
 

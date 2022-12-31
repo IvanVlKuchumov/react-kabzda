@@ -4,7 +4,7 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {AccordionUnControlled} from "./components/Accordion/AccordionUnControlled";
 import {OnOff} from "./components/OnOff/OnOff";
 import {AccordionSelfControlled} from "./components/Accordion/AccordionSelfControlled";
-import {RatingButton} from "./components/Rating/RatingButton";
+import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
         <div className='content'>
             This is APP component
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <RatingButton/>
+            <UncontrolledRating/>
             <AccordionSelfControlled title='menu' collapsed={true}/>
             <AccordionSelfControlled title='title' collapsed={false}/>
             <AccordionUnControlled title={'Acc1'}/>
