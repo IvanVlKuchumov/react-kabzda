@@ -2,24 +2,26 @@ import React, {useState} from 'react';
 import './App.css';
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {AccordionUnControlled} from "./components/Accordion/AccordionUnControlled";
-import {OnOff} from "./components/OnOff/OnOff";
-import {AccordionSelfControlled} from "./components/Accordion/AccordionSelfControlled";
+import {OnOffUncontrolled} from "./components/OnOff/OnOffUncontrolled";
+import {Accordion} from "./components/Accordion/Accordion";
 import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
+import {OnOff} from "./components/OnOff/OnOff";
 
 function App() {
 
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    const [on, setOn] = useState(false)
 
     return (
         <div className='content'>
             This is APP component
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledRating/>
-            <AccordionSelfControlled title='menu' collapsed={true}/>
-            <AccordionSelfControlled title='title' collapsed={false}/>
+            <Accordion title='menu' accordionCollapsed={accordionCollapsed} setAccordionCollapsed={setAccordionCollapsed}/>
             <AccordionUnControlled title={'Acc1'}/>
-            <OnOff />
-            <OnOff />
+            <OnOffUncontrolled />
+            <OnOff on={on} setOn={setOn} />
         </div>
     );
 }
