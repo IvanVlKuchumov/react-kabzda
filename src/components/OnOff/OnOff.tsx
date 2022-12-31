@@ -38,6 +38,7 @@ export const OnOff: React.FC<OnOffPropsType> = ({
         backgroundColor: on ? 'green' : 'red'
     }
 
+
     return (
         <div>
             <div style={onStyle} onClick={() => {
