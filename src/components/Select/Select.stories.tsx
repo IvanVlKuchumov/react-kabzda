@@ -10,9 +10,6 @@ export default {
 
 const Template: Story<SelectPropsType> = (args) => {
     const [value, setValue] = useState(1)
-    // const onChange = (value:any) => {
-    //   setValue(value)
-    // }
     args={...args,
         value:value,
         onChange:(value:any)=>{
