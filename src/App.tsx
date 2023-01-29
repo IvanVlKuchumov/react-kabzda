@@ -18,7 +18,12 @@ function App() {
             This is APP component
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledRating/>
-            <Accordion title='menu' accordionCollapsed={accordionCollapsed} setAccordionCollapsed={setAccordionCollapsed}/>
+            <Accordion title='menu'
+                       accordionCollapsed={accordionCollapsed}
+                       setAccordionCollapsed={setAccordionCollapsed}
+                       items={[{title: 'biba', value:1}, {title:'boba', value:2}, {title:'buba', value:3}]}
+                       onClick={()=>{}}
+            />
             <AccordionUnControlled title={'Acc1'}/>
             <OnOffUncontrolled />
             <OnOff on={on} setOn={setOn} />
