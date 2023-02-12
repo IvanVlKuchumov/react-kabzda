@@ -42,11 +42,14 @@ export const Clock = () => {
     let [date, setDate] = useState(new Date()) // useState не запоминает функцию, расчет будет выполнен только один раз, при первом вызове useState
 
     useEffect(() => {
-        setInterval(
+        const intervalId = setInterval(
             () => setDate(new Date()),
             1000
         )
-    })
+        return ()=> {
+            clearInterval(intervalId)
+        } // срабатывает после того, как компонента "умирает"
+    },[])
 
 
     return <>
