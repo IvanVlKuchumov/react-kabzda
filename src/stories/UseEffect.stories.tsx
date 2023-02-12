@@ -13,28 +13,43 @@ export const SimpleExample = () => {
     let [fake, setFake] = useState(0) // useState не запоминает функцию, расчет будет выполнен только один раз, при первом вызове useState
     console.log('Simple component render')
 
-    useEffect(()=> {
+    useEffect(() => {
         console.log('useEffect every render')
         document.title = counter.toString()
     })
 
-    useEffect(()=> {
+    useEffect(() => {
         console.log('useEffect only first render ~ componentDidMount')
         document.title = counter.toString()
     }, [])
 
 
-    useEffect(()=> {
+    useEffect(() => {
         console.log('useEffect every change counter render')
         document.title = counter.toString()
     }, [counter])
 
 
+    return <>
+        <button onClick={() => setCounter(++counter)}>+</button>
+        Counter: {counter}
+        <button onClick={() => setFake(++fake)}>+</button>
+        Fake: {fake}
+    </>
+}
+
+export const Clock = () => {
+    let [date, setDate] = useState(new Date()) // useState не запоминает функцию, расчет будет выполнен только один раз, при первом вызове useState
+
+    useEffect(() => {
+        setInterval(
+            () => setDate(new Date()),
+            1000
+        )
+    })
+
 
     return <>
-        <button onClick={()=>setCounter(++counter)}>+</button>
-        Counter: {counter}
-        <button onClick={()=>setFake(++fake)}>+</button>
-        Fake: {fake}
+        {date.toLocaleTimeString()}
     </>
 }
